@@ -64,14 +64,18 @@ The application also uses two other modules whose source code can be found in th
 ## Examples
 
 1. Colour Analysis, using RGB mode and log scale
+```console
     python .\compare.py -l ..\img\bridge.jpg -r ..\img\bridge_modified.jpg --verbose colour -m rgb --logdiff
-
+```
 2. HaarPSI
+```console
     python .\compare.py -l ..\img\bridge.jpg -r ..\img\bridge_modified.jpg --verbose haarpsi
+```
 
 3. BRISK, with mismatched keypoints in the output image
+```console
     python .\compare.py -l ..\img\joker.png -r ..\img\joker_modified.png --verbose brisk --mismatched
-
+```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
