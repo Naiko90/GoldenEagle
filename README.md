@@ -25,7 +25,7 @@ If we consider *maxDiff* as the result of the formula that the user has decided 
 
 | Colour (RGBA) | LinearScale | LogScale |
 | --- | --- | --- |
-| (0, 0, 0, 255) | maxDiff == 0 | maxDiff < 0 |
+| (0, 0, 0, 255) | maxDiff == 0 | maxDiff < 2 |
 | (0, 0, 255, 255) | maxDiff == 1 | maxDiff == 2 or maxDiff == 3 |
 | (255, 255, 0, 255) | maxDiff == 2 | maxDiff >=4 and maxDiff < 8 |
 | (255, 165, 0, 255) | maxDiff == 3 or maxDiff == 4 | maxDiff >=8 and maxDiff < 16 |
