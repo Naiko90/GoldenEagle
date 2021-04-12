@@ -12,7 +12,7 @@ import numpy as np
 import argparse
 import psutil
 import math
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity
 import imutils
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -157,7 +157,7 @@ def compare(argv):
 				print('Executing SSIM\n')
 			grayA = cv2.cvtColor(im1, cv2.COLOR_BGR2GRAY)
 			grayB = cv2.cvtColor(im2, cv2.COLOR_BGR2GRAY)
-			(score, diff) = compare_ssim(grayA, grayB, full=True)
+			(score, diff) = structural_similarity(grayA, grayB, full=True)
 			diff = (diff * 255).astype("uint8")
 			if log:
 				print('{:21}'.format('SSIM: ') + '{:10}'.format(str(score)))
